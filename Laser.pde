@@ -9,4 +9,9 @@ public class Laser {
     size = new PVector(10,4);
     c = color(255,0,0);
   }
+  
+  public void show() {
+    fill(c);
+    rect(pos.x,pos.y,size.x,size.y);
+  }
 }
