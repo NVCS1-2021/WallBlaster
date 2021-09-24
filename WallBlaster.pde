@@ -1,5 +1,7 @@
+Laser[] lasers = new Laser[300];
+
 public void setup() {
-  size(800,400); 
+  size(400,800); 
 }
 
 public void draw() {
