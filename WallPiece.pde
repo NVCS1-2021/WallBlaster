@@ -6,6 +6,15 @@ public class WallPiece {
   
   public WallPiece(int x, int y) {
     pos = new PVector(x,y);
-    c = color(10,20,30);
+    c = color(
+      (int)(Math.random()*256),
+      (int)(Math.random()*256),
+      (int)(Math.random()*256)
+    );
+  }
+  
+  public void show() {
+    fill(c);
+    square(pos.x,pos.y,SIZE);
   }
 }
