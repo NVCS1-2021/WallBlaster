@@ -7,9 +7,10 @@ public void setup() {
 
 public void draw() {
   background(220);
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < lasers.length; i++) {
     if (lasers[i] != null) {
       lasers[i].show();
+      lasers[i].move();
     }
   }
 }

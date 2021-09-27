@@ -4,8 +4,8 @@ public class Laser {
   
   public Laser(PVector pos) {
     this.pos = pos;
-    vel = new PVector(1,0);
-    gravity = new PVector(0,1);
+    vel = new PVector(10,0);
+    gravity = new PVector(0,0.1);
     size = new PVector(10,4);
     c = color(255,0,0);
   }
@@ -13,5 +13,10 @@ public class Laser {
   public void show() {
     fill(c);
     rect(pos.x,pos.y,size.x,size.y);
+  }
+  
+  public void move() {
+    vel.add(gravity);
+    pos.add(vel);
   }
 }
