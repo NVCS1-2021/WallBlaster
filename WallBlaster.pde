@@ -1,12 +1,15 @@
 Laser[] lasers = new Laser[300];
 int lasersFired = 0;
+Wall wall;
 
 public void setup() {
-  size(400,800); 
+  size(400,800);
+  wall = new Wall();
 }
 
 public void draw() {
   background(220);
+  wall.show();
   for (int i = 0; i < lasers.length; i++) {
     if (lasers[i] != null) {
       lasers[i].show();

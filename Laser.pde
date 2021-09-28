@@ -19,4 +19,14 @@ public class Laser {
     vel.add(gravity);
     pos.add(vel);
   }
+  
+  public void collides(WallPiece wp) {
+    //if laser and wp overlap
+    if (this.pos.x >= wp.pos.x && this.pos.y >= wp.pos.y) {
+      //then wp gets damaged
+      
+      //laser gets destroyed
+      
+    }
+  }
 }
