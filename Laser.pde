@@ -1,6 +1,7 @@
 public class Laser {
   private PVector pos, vel, gravity, size;
   private color c;
+  private boolean active = true;
   
   public Laser(PVector pos) {
     this.pos = pos;
@@ -22,11 +23,13 @@ public class Laser {
   
   public void collides(WallPiece wp) {
     //if laser and wp overlap
-    if (this.pos.x >= wp.pos.x && this.pos.y >= wp.pos.y) {
+    if (this.pos.x >= wp.pos.x 
+      && this.pos.y >= wp.pos.y
+      && this.pos.y <= wp.pos.y + wp.SIZE) {
       //then wp gets damaged
       
       //laser gets destroyed
-      
+      active = false;
     }
   }
 }

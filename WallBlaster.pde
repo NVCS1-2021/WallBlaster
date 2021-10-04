@@ -11,7 +11,7 @@ public void draw() {
   background(220);
   wall.show();
   for (int i = 0; i < lasers.length; i++) {
-    if (lasers[i] != null) {
+    if (lasers[i] != null && lasers[i].active) {
       lasers[i].show();
       lasers[i].move();
     }
