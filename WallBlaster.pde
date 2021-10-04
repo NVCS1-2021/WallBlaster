@@ -14,6 +14,10 @@ public void draw() {
     if (lasers[i] != null && lasers[i].active) {
       lasers[i].show();
       lasers[i].move();
+      for (int j = 0; j < wall.pieces.length; j++) {
+        WallPiece oneWP = wall.pieces[j];
+        lasers[i].collides(oneWP);
+      }
     }
   }
 }

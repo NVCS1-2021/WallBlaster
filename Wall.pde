@@ -1,6 +1,6 @@
 public class Wall {
   private PVector pos, size;
-  private WallPiece[] pieces;
+  public WallPiece[] pieces;
   
   public Wall() {
     size = new PVector(150,height);

@@ -28,6 +28,8 @@ public class Laser {
       && this.pos.y <= wp.pos.y + wp.SIZE) {
       //then wp gets damaged
       
+      //if wp has no health, destroy wp
+      
       //laser gets destroyed
       active = false;
     }
