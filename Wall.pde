@@ -17,7 +17,8 @@ public class Wall {
   
   public void show() {
     for (int i = 0; i < pieces.length; i++) {
-      pieces[i].show();
+      if (pieces[i].active)
+        pieces[i].show();
     }
   }
 }

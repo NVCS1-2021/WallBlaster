@@ -3,6 +3,7 @@ public class WallPiece {
   private final int SIZE = 10;
   private int hp = 3;
   private color c;
+  public boolean active = true;
   
   public WallPiece(int x, int y) {
     pos = new PVector(x,y);

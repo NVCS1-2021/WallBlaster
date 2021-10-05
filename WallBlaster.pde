@@ -16,7 +16,8 @@ public void draw() {
       lasers[i].move();
       for (int j = 0; j < wall.pieces.length; j++) {
         WallPiece oneWP = wall.pieces[j];
-        lasers[i].collides(oneWP);
+        if (oneWP.active)
+          lasers[i].collides(oneWP);
       }
     }
   }
