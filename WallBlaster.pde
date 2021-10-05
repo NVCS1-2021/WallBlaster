@@ -1,4 +1,4 @@
-Laser[] lasers = new Laser[300];
+Laser[] lasers = new Laser[30000];
 int lasersFired = 0;
 Wall wall;
 
@@ -9,6 +9,7 @@ public void setup() {
 
 public void draw() {
   background(220);
+  if (mousePressed) fireLaser();
   wall.show();
   for (int i = 0; i < lasers.length; i++) {
     if (lasers[i] != null && lasers[i].active) {
@@ -23,7 +24,7 @@ public void draw() {
   }
 }
 
-public void mouseReleased() {
+public void fireLaser() {
   Laser laser = new Laser(new PVector(mouseX,mouseY));
   lasers[lasersFired] = laser;
   lasersFired++;

@@ -23,7 +23,8 @@ public class Laser {
   
   public void collides(WallPiece wp) {
     //if laser and wp overlap
-    if (this.pos.x >= wp.pos.x 
+    if (this.pos.x >= wp.pos.x
+      && this.pos.x <= wp.pos.x + wp.SIZE
       && this.pos.y >= wp.pos.y
       && this.pos.y <= wp.pos.y + wp.SIZE) {
       //then wp gets damaged
